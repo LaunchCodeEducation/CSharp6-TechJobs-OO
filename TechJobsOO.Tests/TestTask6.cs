@@ -10,7 +10,7 @@ namespace TechJobsOO.Tests
         /* TODO: Task 6: Remove this line to uncomment the tests
          
         [TestMethod] //1
-        public void Test_Attributes_Of_JobField()
+        public void Test01_Attributes_Of_JobField()
         {
             //setup 
             Type jFType = typeof(JobField);
@@ -22,7 +22,7 @@ namespace TechJobsOO.Tests
 
 
         [TestMethod]  //2
-        public void Test_DRY_Employer()
+        public void Test02_DRY_Employer()
         {
             //setup
             Type empType = typeof(Employer);
@@ -38,7 +38,7 @@ namespace TechJobsOO.Tests
 
 
         [TestMethod] //3
-        public void Test_DRY_Location()
+        public void Test03_DRY_Location()
         {
             //setup
             Type locType = typeof(Location);
@@ -54,7 +54,7 @@ namespace TechJobsOO.Tests
 
 
         [TestMethod] //4
-        public void Test_DRY_Position()
+        public void Test04_DRY_Position()
         {
             //setup
             Type posType = typeof(PositionType);
@@ -70,7 +70,7 @@ namespace TechJobsOO.Tests
 
 
         [TestMethod] //5
-        public void Test_DRY_CoreCompetency()
+        public void Test05_DRY_CoreCompetency()
         {
             //setup
             Type ccType = typeof(CoreCompetency);

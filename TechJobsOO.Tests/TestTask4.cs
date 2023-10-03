@@ -9,7 +9,7 @@ namespace TechJobsOO.Tests
         /* TODO: Task 4: Remove this line to uncomment the tests
 
         [TestMethod] //1
-        public void Test_TestSettingJobIdExists()
+        public void Test01_TestSettingJobIdExists()
         {
             //setup
             Type testType = typeof(JobTests);
@@ -32,7 +32,7 @@ namespace TechJobsOO.Tests
 
 
         [TestMethod] //2
-        public void Test_TestJobConstructorSetsAllFields()
+        public void Test02_TestJobConstructorSetsAllFields()
         {
             Type testType = typeof(JobTests);
             MemberInfo[] memberInfos = testType.GetMembers();
@@ -54,7 +54,7 @@ namespace TechJobsOO.Tests
 
 
         [TestMethod] //3
-        public void Test_TestJobsForEquality()
+        public void Test03_TestJobsForEquality()
         {
             Type testType = typeof(JobTests);
             MemberInfo[] memberInfos = testType.GetMembers();

@@ -1,4 +1,5 @@
-﻿
+using System.Text.RegularExpressions;
+
 namespace TechJobsOO.Tests
 {
 	[TestClass]
@@ -62,7 +63,7 @@ namespace TechJobsOO.Tests
 
 
         [TestMethod]  //3
-        public void Test03_ToStringContainsCorrectLabelsAndData_Exists()
+        public void Test03_TestToStringContainsCorrectLabelsAndData_Exists()
         {
             //test to verify that TestToStringContainsCorrectLabelsAndData exisits
 
@@ -147,7 +148,7 @@ namespace TechJobsOO.Tests
             var outputLines = Regex.Split(output, "\r\n|\r|\n");
 
             //verify
-            CollectionAssert.AreEqual(text, output, "Empty string handling error");
+            CollectionAssert.AreEqual(textLines, outputLines, "Empty string handling error");
         }
         TODO: Task 5: Remove this line to uncomment the tests*/
 

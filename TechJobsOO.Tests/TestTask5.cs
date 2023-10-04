@@ -1,4 +1,5 @@
-﻿
+using System.Text.RegularExpressions;
+
 namespace TechJobsOO.Tests
 {
 	[TestClass]
@@ -14,7 +15,7 @@ namespace TechJobsOO.Tests
 
 
         [TestMethod]  //1
-        public void TestToStringStartsAndEndsWithNewLineExists()
+        public void Test01_TestToStringStartsAndEndsWithNewLineExists()
         {
             //test to verify that TestToStringStartsAndEndsWithNewLine exisits
 
@@ -39,7 +40,7 @@ namespace TechJobsOO.Tests
 
 
         [TestMethod]  //2
-        public void Test_TestToString_Starts_And_Ends_With_NewLine()
+        public void Test02_TestToString_Starts_And_Ends_With_NewLine()
         {
             //comparing output to a text file.
             //id numbers may get a little wonky
@@ -51,16 +52,18 @@ namespace TechJobsOO.Tests
             var job = new RunTechJobs();
             job.RunProgram();
             var output = stringWriter.ToString();
+            var textLines = Regex.Split(text, "\r\n|\r|\n");
+            var outputLines = Regex.Split(output, "\r\n|\r|\n");
 
             //verify
-            Assert.AreEqual(text, output, "New Line issue");
+            CollectionAssert.AreEqual(textLines, outputLines, "New Line issue");
         }
 
         //Unit Test 2: TestToStringContainsCorrectLabelsAndData -----------------------
 
 
         [TestMethod]  //3
-        public void TestToStringContainsCorrectLabelsAndData_Exists()
+        public void Test03_TestToStringContainsCorrectLabelsAndData_Exists()
         {
             //test to verify that TestToStringContainsCorrectLabelsAndData exisits
 
@@ -85,7 +88,7 @@ namespace TechJobsOO.Tests
 
 
         [TestMethod]  //4
-        public void Test_TestToStringContainsCorrectLabelsAndData()
+        public void Test04_TestToStringContainsCorrectLabelsAndData()
         {
             //comparing output to a text file.
             //id numbers may get a little wonky
@@ -105,7 +108,7 @@ namespace TechJobsOO.Tests
         //Unit Test 3: TestToStringHandlesEmptyField --------------------
 
         [TestMethod] //5
-        public void TestToStringHandlesEmptyField_Exists()
+        public void Test05_TestToStringHandlesEmptyField_Exists()
         {
             //test to verify that TestToStringHandlesEmptyField exisits
             //setup
@@ -130,7 +133,7 @@ namespace TechJobsOO.Tests
 
 
         [TestMethod] //6
-        public void Test_TestToStringHandlesEmptyField()
+        public void Test06_TestToStringHandlesEmptyField()
         {
             //comparing output to a text file.
             //id numbers may get a little wonky
@@ -141,9 +144,11 @@ namespace TechJobsOO.Tests
             var job = new RunTechJobs();
             job.RunProgram();
             var output = stringWriter.ToString();
+            var textLines = Regex.Split(text, "\r\n|\r|\n");
+            var outputLines = Regex.Split(output, "\r\n|\r|\n");
 
             //verify
-            Assert.AreEqual(text, output, "Empty string handling error");
+            CollectionAssert.AreEqual(textLines, outputLines, "Empty string handling error");
         }
         TODO: Task 5: Remove this line to uncomment the tests*/
 

@@ -10,7 +10,7 @@ namespace TechJobsOO.Tests
           
      
         [TestMethod]    //1
-        public void Test_JobClass_Has_No_Arg_Constructor()
+        public void Test01_JobClass_Has_No_Arg_Constructor()
         {
             Type jobType = typeof(Job);
             ConstructorInfo[] constructorInfos = jobType.GetConstructors();
@@ -38,7 +38,7 @@ namespace TechJobsOO.Tests
 
 
         [TestMethod] //2
-        public void Test_No_Arg_Constructor_Sets_Unique_Id()
+        public void Test02_No_Arg_Constructor_Sets_Unique_Id()
         {
             Job testJob1 = new Job();
             Job testJob2 = new Job();
@@ -48,7 +48,7 @@ namespace TechJobsOO.Tests
 
 
         [TestMethod]  //3
-        public void Test_JobClass_Has_Second_Constructror()
+        public void Test03_JobClass_Has_Second_Constructror()
         {
             //setup
             Type jobType = typeof(Job);
@@ -77,7 +77,7 @@ namespace TechJobsOO.Tests
 
 
         [TestMethod] //4
-        public void Test_JobClass_Has_Accessors()
+        public void Test04_JobClass_Has_Accessors()
         {
             //setup
             Job testJob1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
@@ -94,7 +94,7 @@ namespace TechJobsOO.Tests
 
 
         [TestMethod] //5
-        public void Test_Equals_Method_Setup()
+        public void Test05_Equals_Method_Setup()
         {
             //setup
             Job testJob1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
@@ -116,7 +116,7 @@ namespace TechJobsOO.Tests
 
 
         [TestMethod]  //6
-        public void Test_GetHashCode_Setup()
+        public void Test06_GetHashCode_Setup()
         {
             //setup
             Job testJob1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
